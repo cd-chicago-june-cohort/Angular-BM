@@ -1,0 +1,20 @@
+<div class="input">
+    <input 
+        type="number" 
+        min="1"
+        max="100"
+        name="multiplier" 
+        placeholder="Initial Power Level" 
+        [(ngModel)]="power">
+</div>
+<div class="row">
+    <div class="col l4">
+        <app-human-component [power]="power"></app-human-component>
+    </div>
+    <div class="col l4">
+        <app-saiyan-component [power]="power"></app-saiyan-component>
+    </div>
+    <div class="col l4">
+        <app-super-saiyan-component [power]="power"></app-super-saiyan-component>
+    </div>
+</div>

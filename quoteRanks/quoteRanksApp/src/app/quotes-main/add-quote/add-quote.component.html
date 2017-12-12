@@ -1,34 +1,45 @@
-<div class="addQuote">
+<div class="col l12 addQuote">
 
   <form #formData="ngForm" (submit)="onSubmit(formData)">
 
-    <label for="body">Tell us your thoughts:</label>
-    <textarea
+    <div class="col l6">
+      <label for="body">Tell us your thoughts:</label>
+      <textarea
+
+        style="margin-bottom: 0px;"
+        required
+        rows="20"
+        cols="150"
+        name="body"
+        minlength="1"
+        [(ngModel)]="newQuote.body"
+        #body="ngModel">
+      </textarea>
+      <span *ngIf="!body.valid" class='invalid quote'>Quote is required.</span>
+    </div>
+
+    <div class="col l6" style="margin-bottom: 0px;">
+      <label for="author">Tell us your name:</label>
+      <input
+      
+      style="margin-bottom: 0px;"
       required
-      rows="20"
-      cols="150"
-      name="body"
+      type="text" 
+      name="author" 
+      required 
       minlength="1"
-      [(ngModel)]="newQuote.body"
-      #body="ngModel">
-    </textarea>
-
-    <label for="author">Tell us your name:</label>
-    <input
-    required
-    type="text" 
-    name="author" 
-    required 
-    minlength="1"
-    [(ngModel)]="newQuote.author"
-    #author="ngModel">
-    <input type="submit" value="Add Quote" [disabled]="!formData.valid">
-
+      [(ngModel)]="newQuote.author"
+      #author="ngModel">
+      <span *ngIf="!author.valid" class='invalid author'>Author is required.</span>
+      </div>
+      <div class="col l12 center">
+        <input type="submit" value="Add Quote" [disabled]="!formData.valid">
+      </div>
   </form>
 
 </div>
 
 <div class='validations'>
-    <span *ngIf="!body.valid" class='invalid quote'>Quote is required.</span>
-    <span *ngIf="!author.valid" class='invalid author'>Author is required.</span>
+    
+    
 </div>

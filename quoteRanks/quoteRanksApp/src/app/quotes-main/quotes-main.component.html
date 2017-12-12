@@ -1,9 +1,9 @@
-<div class="col l12">
-  <app-add-quote [quotes]='quotes' (createQuoteEvent)='createQuote($event)'></app-add-quote>
-</div>
+<div class="row">
+  <div class="col l12">
+    <app-add-quote [quotes]='quotes' (createQuoteEvent)='createQuote($event)'></app-add-quote>
+  </div>
 
-<div class="col l12">
-  <app-quotes-list
-  *ngFor="let quote of quotes">
-  </app-quotes-list>
+  <div class="col 112">
+    <app-quotes-list></app-quotes-list>
+  </div>
 </div>

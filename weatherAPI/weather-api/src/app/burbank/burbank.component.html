@@ -1,0 +1,19 @@
+
+<div class="row">
+  <div class="col l12">
+    <div class="col l12 main">
+        <h1 class="currentCity">Burbank, CA</h1>
+    </div> 
+
+    <div class="col l6">
+      <h2 style="color: red">Forecast: {{burbank.weather[0].description}}</h2>
+      <h3>Temperature (High): {{burbank.main.temp_max}}</h3>
+      <h3>Temperature (Low): {{burbank.main.temp_min}}</h3>
+      <h3>Humidity (Average): {{burbank.main.humidity}}</h3>
+    </div>
+
+    <div class="col l6 cityPic">  
+        <img src="http://a.abcnews.com/images/Travel/CB_burbank_california_jef_130701_16x9_992.jpg" alt="Burbank" width="320">
+    </div>
+  </div>
+</div>

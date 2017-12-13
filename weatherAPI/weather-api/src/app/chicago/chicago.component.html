@@ -1,0 +1,19 @@
+
+<div class="row center">
+  <div class="col l12">
+    <div class="col l12 main">
+        <h1 class="currentCity">Chicago, IL</h1>
+    </div> 
+
+    <div class="col l6">
+      <h2 style="color: red">Forecast: {{chicago.weather[0].description}}</h2>
+      <h3>Temperature (High): {{chicago.main.temp_max}}</h3>
+      <h3>Temperature (Low): {{chicago.main.temp_min}}</h3>
+      <h3>Humidity (Average): {{chicago.main.humidity}}</h3>
+    </div>
+
+    <div class="col l6 cityPic">  
+        <img src="https://static.pexels.com/photos/161963/chicago-illinois-skyline-skyscrapers-161963.jpeg" alt="Chicago" width="320">
+    </div>
+  </div>
+</div>

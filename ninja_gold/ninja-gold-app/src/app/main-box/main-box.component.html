@@ -4,22 +4,22 @@
       <div class="col l3 actionBox">
         <h3>Farm</h3>
         <h4>Earn 2-5 Gold</h4>
-        <button>Farm!</button>
+        <button (click)="getGold('Farm', 2, 5)">Farm!</button>
       </div>
       <div class="col l3 actionBox">
         <h3>Cave</h3>
-        <h4>Earn 2-5 Gold</h4>
-        <button>Cave!</button>
+        <h4>Earn 5-10 Gold</h4>
+        <button (click)="getGold('Cave', 5, 10)">Farm!</button>
       </div>
       <div class="col l3 actionBox">
         <h3>Casino</h3>
-        <h4>Earn 2-5 Gold</h4>
-        <button>Casino!</button>
+        <h4>win/lose up to 100 Gold</h4>
+        <button (click)="getGold('Casino', -100, 100)">Farm!</button>
       </div>
       <div class="col l3 actionBox">
         <h3>House</h3>
-        <h4>Earn 2-5 Gold</h4>
-        <button>House!</button>
+        <h4>Earn 7-15 Gold</h4>
+        <button (click)="getGold('House', 7, 15)">Farm!</button>
       </div>
   
     </div>

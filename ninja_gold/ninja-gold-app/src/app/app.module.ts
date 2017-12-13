@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { CountBoxComponent } from './count-box/count-box.component';
@@ -16,7 +17,9 @@ import { DataServiceService } from './data-service.service';
     BottomBoxComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpModule
+
   ],
   providers: [DataServiceService],
   bootstrap: [AppComponent]

@@ -1,3 +1,4 @@
-<p>
-  bottom-box works!
-</p>
+<h2>Here's what's going on:</h2>
+<div class="col l12 center" *ngFor = "let message of _dataService.messages">
+    <h6 *ngIf="_dataService.messages">{{ message }}</h6>
+</div>

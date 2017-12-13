@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { DataServiceService } from '../data-service.service';
 
 @Component({
@@ -8,9 +8,12 @@ import { DataServiceService } from '../data-service.service';
 })
 export class CountBoxComponent implements OnInit {
 
+  @Input() gold
+
   constructor(private _dataService: DataServiceService) { }
 
   ngOnInit() {
+    this.gold = this._dataService.goldAmt();
   }
 
 }

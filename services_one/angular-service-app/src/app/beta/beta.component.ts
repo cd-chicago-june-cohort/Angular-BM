@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges } from '@angular/core';
 import { DataService } from '../data.service';
 
 @Component({
@@ -8,9 +8,16 @@ import { DataService } from '../data.service';
 })
 export class BetaComponent implements OnInit {
 
+  numbers: number[] = [];
+
   constructor(private _dataService: DataService) { }
 
   ngOnInit() {
+    this.numbers = this._dataService.retrieveNumber();
+  }
+
+  ngOnChanges() {
+    this.numbers = this._dataService.retrieveNumber();
   }
 
 }

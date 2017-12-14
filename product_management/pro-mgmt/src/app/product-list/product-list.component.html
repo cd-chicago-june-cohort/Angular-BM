@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="col l4" *ngFor="let product of products">
+    <p> {{ product.name }}</p>
+    <p> ${{ product.price }}</p>
+    <p> {{ product.index }}</p>
+    <hr>
+    <img src="{{product.url}}" width="300px"><br>
+    <button (click)="delete(product.index)">DELETE</button>
+    <button (click)="edit(product.index, product.name)">EDIT</button>
+  </div>
+  
+</div>
+

@@ -1,0 +1,12 @@
+.navbar {
+    border: 2px solid grey;
+    border-radius: 5px;
+}
+
+button {
+    width: 80px;
+    background-color: slategray;
+    color: black;
+    border: 2px solid grey;
+    border-radius: 5px;
+}

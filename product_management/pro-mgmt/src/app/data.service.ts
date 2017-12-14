@@ -1,8 +1,12 @@
 import { Injectable } from '@angular/core';
+import { Product } from './product';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable()
 export class DataService {
 
+  productsObservable = new BehaviorSubject(null);
+  
   products = []
   index = 0
 
@@ -26,8 +30,8 @@ export class DataService {
   getOne(idx){
     return this.products[idx]
   }
-  update(idx, item){
-    this.products[idx] = item;
+  update(item){
+    this.products[item] = item;
   }
   remove(idx){
     this.products.splice(idx, 1)

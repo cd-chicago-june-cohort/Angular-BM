@@ -26,7 +26,7 @@ export class ProductListComponent implements OnInit {
   }
 
   edit(idx, name){
-    this._dataService.update(idx, name)
+    this._dataService.update(name)
   }
 
 }
